@@ -14,6 +14,11 @@
 
 get_header(); ?>
 
+
+	<?php
+		// THIS IS A CHANGE TO MY FILE
+	?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -29,16 +34,22 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
+
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-					<div style="z-index:2;" id="post-<?php the_ID(); ?>" class="dt-portfolio-item"> 
+	<!-- 				<div style="z-index:2;" id="post-<?php the_ID(); ?>" class="dt-portfolio-item"> 
 					<h2> <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 						<?php the_title(); ?>
 					
 					</a></h2>
 					
-					<?php the_excerpt(); ?>
+					<?php the_excerpt(); ?> -->
+
+					<div class='gg-featured-image'>
+
+					<?php the_post_thumbnail() ; ?>
+					</div>
 
 
 					<!-- <img src="wp-content/themes/testtheme/assets/images/buddy.JPG"> -->
@@ -62,4 +73,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php //get_sidebar(); ?>
-<?php //get_footer(); ?>
+<?php get_footer(); ?>
