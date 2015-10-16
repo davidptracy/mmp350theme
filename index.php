@@ -17,6 +17,10 @@ get_header(); ?>
 
 	<?php
 		// THIS IS A CHANGE TO MY FILE
+
+
+
+		// THIS WAS FROM A DIFFERENT DIRECTORY
 	?>
 
 	<div id="primary" class="content-area">
